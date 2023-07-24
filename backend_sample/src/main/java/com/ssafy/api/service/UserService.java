@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5257b2c9f1b6982816d15bffd68017742e9dac35d35455b7a87a2e415fa0fc65
-size 339
+package com.ssafy.api.service;
+
+import com.ssafy.api.request.UserRegisterPostReq;
+import com.ssafy.db.entity.User;
+
+/**
+ *	유저 관련 비즈니스 로직 처리를 위한 서비스 인터페이스 정의.
+ */
+public interface UserService {
+	User createUser(UserRegisterPostReq userRegisterInfo);
+	User getUserByUserId(String userId);
+}

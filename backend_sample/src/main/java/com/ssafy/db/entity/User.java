@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:17aff2a5d81576b9a48ff6079c804cab59b324adbf9a730fdc6026614038910d
-size 490
+package com.ssafy.db.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+
+/**
+ * 유저 모델 정의.
+ */
+@Entity
+@Getter
+@Setter
+public class User extends BaseEntity{
+    String position;
+    String department;
+    String name;
+    String userId;
+
+    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    String password;
+}
