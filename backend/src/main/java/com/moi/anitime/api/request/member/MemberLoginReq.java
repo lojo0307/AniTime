@@ -1,19 +1,3 @@
-package com.moi.anitime.api.request.member;
-
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
-
-/**
- * 유저 회원가입 API ([POST] /api/v1/users) 요청에 필요한 리퀘스트 바디 정의.
- */
-@Getter
-@Setter
-@ApiModel("memberLoginReq")
-public class MemberLoginReq {
-	@ApiModelProperty(name="이메일")
-	String email;
-	@ApiModelProperty(name="패스워드")
-	String password;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:97e96ce94a6b85592408a5c96c484f1b06a4876c4f49f1b769e472793ddf9edf
+size 528
