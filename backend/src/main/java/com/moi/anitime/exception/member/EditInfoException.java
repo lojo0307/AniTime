@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5f6f0f870e90e1b001f553287806735d9a7b86843c3cd55e73d31788582e1165
-size 330
+package com.moi.anitime.exception.member;
+
+public class EditInfoException extends RuntimeException {
+    public EditInfoException(){
+        super();
+    }
+
+    public EditInfoException(String message){
+        super(message);
+    }
+
+    public EditInfoException(String message, Throwable th){
+        super(message, th);
+    }
+}
