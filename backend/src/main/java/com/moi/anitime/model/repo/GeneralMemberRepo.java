@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2475f8ecb9c28d5b2962b4f6cf91b4df34dbf2f36870442479499afbbd22ad09
-size 441
+package com.moi.anitime.model.repo;
+
+import com.moi.anitime.model.entity.member.GeneralMember;
+import com.moi.anitime.model.entity.member.Member;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface GeneralMemberRepo extends JpaRepository<GeneralMember, Integer> {
+
+}
