@@ -1,15 +1,3 @@
-package com.moi.anitime.exception.member;
-
-public class NonExistEmailException extends RuntimeException{
-    public NonExistEmailException(){
-        super();
-    }
-
-    public NonExistEmailException(String message){
-        super(message);
-    }
-
-    public NonExistEmailException(String message, Throwable th){
-        super(message, th);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c25b608401175368527fa7f094770eacb4a98c7c3610bd08f68e87492521bda
+size 349
