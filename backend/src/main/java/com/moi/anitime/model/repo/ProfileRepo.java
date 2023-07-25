@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7450ee99a0781623767b136b8efe9c5881fb3697b93340fdc551d1ebed33a1ba
-size 289
+package com.moi.anitime.model.repo;
+
+import com.moi.anitime.model.entity.profile.Profile;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProfileRepo extends JpaRepository<Profile, Integer> {
+
+}
