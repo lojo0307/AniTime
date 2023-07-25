@@ -1,13 +1,3 @@
-package com.moi.anitime.model.repo;
-
-import com.moi.anitime.model.entity.member.Member;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
-
-@Repository
-public interface MemberRepo extends JpaRepository<Member, Integer> {
-    public Optional<Member> findByEmail (@Param("email") String email);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3f64042a5c6ec7cb1bd05e4f20962ab04407db6129e0badc72b133ea0b47e405
+size 1210
