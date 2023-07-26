@@ -1,13 +1,3 @@
-package com.moi.anitime;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class AnitimeApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(AnitimeApplication.class, args);
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e5ae230969be8fb92aa226af1dff86e5d557295b911fdd503f49cb006b1160ff
+size 310
