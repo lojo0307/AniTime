@@ -1,15 +1,3 @@
-package com.moi.anitime;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableScheduling;
-
-@EnableScheduling
-@SpringBootApplication
-public class AnitimeApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(AnitimeApplication.class, args);
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b95bab4f30a01d8b5b844ac5a84989aefe996d141fc954d3e50720a343ff2a3
+size 395
