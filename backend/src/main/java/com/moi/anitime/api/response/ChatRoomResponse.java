@@ -1,18 +1,3 @@
-package com.moi.anitime.api.response;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class ChatRoomResponse {
-    private int roomNo;
-    private String shelterName;
-    private String lastMsg;
-    private int unreadCnt;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0459dfef9424e60891d58fd06c233549f69bc153b31da47a7633a9bf22239f20
+size 343
