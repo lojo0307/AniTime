@@ -1,10 +1,3 @@
-package com.moi.anitime.model.service.profile;
-
-import com.moi.anitime.api.request.profile.ProfileRegistReq;
-import com.moi.anitime.model.entity.profile.Profile;
-
-public interface ProfileService {
-    void registProfile(ProfileRegistReq profileRegistReq);
-
-    void deleteProfile(int profileNo);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:32c8694ddb4fc3521922cb244bc132be1604cf508092ebb5fde213a0fd097d01
+size 435
