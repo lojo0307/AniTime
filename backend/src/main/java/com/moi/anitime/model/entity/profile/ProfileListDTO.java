@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ee9708ab81215a8ebde0f5700542bbe3d7943941189266eded3d44253234a116
-size 271
+package com.moi.anitime.model.entity.profile;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ProfileListDTO {
+    private int profileNo;
+    private String profileName;
+}
