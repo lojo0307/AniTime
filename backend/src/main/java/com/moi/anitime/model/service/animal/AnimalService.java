@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c79b70fb1ca65def48308eb793dcd5d6bd8517d8b7d0dea2341349d70057c4c1
-size 361
+package com.moi.anitime.model.service.animal;
+
+import com.moi.anitime.exception.animal.ListLoadingException;
+import com.moi.anitime.model.entity.animal.Animal;
+
+import java.util.List;
+
+public interface AnimalService {
+    public List<Animal> getAllAnimal(int generalNo, int kindType, int genderType, int sortType, int curPageNo) throws ListLoadingException;
+
+}
