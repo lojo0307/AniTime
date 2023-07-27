@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7b545de0796a5cc5647d86f88ff4ecab121664bd45628d7321f840c52b22c1cc
-size 373
+package com.moi.anitime.exception.animal;
+
+public class NonExistDesertionNoException extends RuntimeException{
+    public NonExistDesertionNoException(){
+        super();
+    }
+
+    public NonExistDesertionNoException(String message){
+        super(message);
+    }
+
+    public NonExistDesertionNoException(String message, Throwable th){
+        super(message, th);
+    }
+}
