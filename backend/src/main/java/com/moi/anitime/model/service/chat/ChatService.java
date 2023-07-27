@@ -1,13 +1,3 @@
-package com.moi.anitime.model.service.chat;
-
-import com.moi.anitime.api.response.ChatRoomResponse;
-import com.moi.anitime.exception.chat.UnknownMemberKindException;
-import com.moi.anitime.model.entity.chat.ChatRoom;
-
-import java.util.List;
-
-public interface ChatService {
-    public List<ChatRoomResponse> getRoomsByMemberNo(int memberKind, int memberNo) throws UnknownMemberKindException;
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:523257860af9dccd8b5d78676010ec3343e86555d200d5c471f53668fee4f81c
+size 733
