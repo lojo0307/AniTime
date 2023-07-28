@@ -1,17 +1,3 @@
-import React from "react";
-import { styled } from "styled-components";
-
-export default function RouterTest() {
-  return (
-    <Div>
-      <p>Router Test</p>
-    </Div>
-  );
-}
-
-const Div = styled.div`
-  background-color: blue;
-  margin: auto;
-  width: 1000px;
-  height: 1400px;
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:27be4b7168b69aefe1e14c0f910a69bd358b6ca2327e4d1ce25c17d76470a708
+size 280
