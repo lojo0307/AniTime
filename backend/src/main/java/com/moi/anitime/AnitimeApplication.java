@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f7f0cb08dcd8b9c714dc3758357cecd95e046f66045024d83e0017fe7d1b620b
-size 487
+package com.moi.anitime;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@EnableScheduling
+@EnableJpaAuditing
+@SpringBootApplication
+public class AnitimeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AnitimeApplication.class, args);
+	}
+
+}

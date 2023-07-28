@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:03ae60c83871324a15d71a77047ef747b06d9a9f72a157585df58dfde166f55c
-size 301
+package com.moi.anitime.model.service.bookmark;
+
+import com.moi.anitime.api.request.bookmark.BookmarkReq;
+import com.moi.anitime.model.entity.bookmark.Bookmark;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface BookmarkService {
+    public void bookmark(BookmarkReq bookmarkReq);
+}
