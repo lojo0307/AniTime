@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4fbcf71a331ed381aa975c95682b298dede196a899d7c874f7862ef338e2657
-size 426
+import "./App.css";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import { Outlet } from "react-router";
+import store from "./store";
+import { Provider } from "react-redux";
+
+function App() {
+  return (
+    <div className="App">
+      <Provider store={store}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </Provider>
+    </div>
+  );
+}
+
+export default App;
