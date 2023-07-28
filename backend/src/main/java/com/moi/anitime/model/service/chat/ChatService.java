@@ -1,12 +1,3 @@
-package com.moi.anitime.model.service.chat;
-
-import com.moi.anitime.api.response.ChatRoomResponse;
-import com.moi.anitime.model.entity.chat.ChatRoom;
-
-import java.util.List;
-
-public interface ChatService {
-    public List<ChatRoomResponse> getRoomsByMemberNo(int memberNo);
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e32b2fc300e44169698e7752772005f53b7289a5a102532a18dd6535249743ec
+size 842
