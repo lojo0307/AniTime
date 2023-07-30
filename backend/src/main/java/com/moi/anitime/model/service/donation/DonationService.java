@@ -1,12 +1,3 @@
-package com.moi.anitime.model.service.donation;
-
-import com.moi.anitime.api.request.donation.DonationBoardRegistReq;
-import com.moi.anitime.model.entity.donation.DonationBoard;
-
-/**
- * 후원 공고 및 내역 관련 비즈니스 로직 처리를 위한 서비스 인터페이스 정의.
- */
-public interface DonationService {
-    void registDonationBoard(DonationBoardRegistReq donationBoardRegistReq);
-    DonationBoard findDonationBoardByBoardNo(int boardNo);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fb81adfc844d25bd8c682150e87c3968b9e4577c8f7012bb1336febaa82a3bc7
+size 935
