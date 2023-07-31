@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d26c0349b7f4cf4410cd82ac7ba87aa3344fb203a29f3ef35569b5898c5a2995
-size 1542
+import { useSelector } from "react-redux";
+
+export default function profileDetail() {
+  let detail = useSelector((state) => {
+    return state.detailInfo;
+  });
+  return (
+    <div>{/* state에 있는 profileNo에 해당하는 프로필 상세정보 조회 */}</div>
+  );
+}
