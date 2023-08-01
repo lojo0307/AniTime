@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e91c803c9b04a5092c4916b9c2f01cf06877cb4db06d99e3b29bbcda852a9bba
-size 405
+package com.moi.anitime.api.response.animal;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class AnimalPreviewRes {
+    private long desertionNo;
+
+    private String category; // 축종
+    private String detailKind;
+
+    private char sexCd;
+
+    private String thumbnail;
+
+
+
+}
