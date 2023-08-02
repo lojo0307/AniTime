@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9748a317cf7e7e201f42b4d511a95451c1139ecc2f97cf9646966df842e9ec73
-size 309
+import { combineReducers } from "redux";
+import memberReducer from "./reducer/member";
+import detailInfoReducer from "./reducer/detailInfo";
+
+const rootReducer = combineReducers({
+  member: memberReducer,
+  detailInfo: detailInfoReducer,
+  // 필요한거 더 추가하세요
+});
+
+export default rootReducer;
