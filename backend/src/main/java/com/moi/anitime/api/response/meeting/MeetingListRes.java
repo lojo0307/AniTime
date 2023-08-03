@@ -1,17 +1,3 @@
-package com.moi.anitime.api.response.meeting;
-
-import lombok.Builder;
-import lombok.Data;
-
-import java.time.LocalDateTime;
-
-@Data
-@Builder
-public class MeetingListRes {
-    private int meetNo;
-    private String shelterName;
-    private String meetContent;
-    private long desertionNo;
-    private LocalDateTime reservedDate;
-    private int state;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:faa00d185c802299d0bf0918103a7f7bbfe13b941b744b942fccdf720102b531
+size 369
