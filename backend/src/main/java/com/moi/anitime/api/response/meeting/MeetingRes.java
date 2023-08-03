@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f27736bfeeac4fa528e98b7eda7be5958ffb4810e6cbd479d91781f16d3c8ba6
-size 331
+package com.moi.anitime.api.response.meeting;
+
+import com.moi.anitime.model.entity.animal.Animal;
+import com.moi.anitime.model.entity.meeting.Meeting;
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+public class MeetingRes {
+    private Meeting meet;
+    private String adoptionForm;
+
+}
