@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2ba4d146d67f0160159626466476196d0e1be636bd6d9ef458167ce96db794c7
-size 382
+package com.moi.anitime.exception.member;
+
+public class SnsNotConnectedMemberException extends RuntimeException {
+    public SnsNotConnectedMemberException(){
+        super();
+    }
+
+    public SnsNotConnectedMemberException(String message){
+        super(message);
+    }
+
+    public SnsNotConnectedMemberException(String message, Throwable th){
+        super(message, th);
+    }
+}
