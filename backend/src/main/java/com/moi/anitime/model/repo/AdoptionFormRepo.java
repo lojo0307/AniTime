@@ -1,13 +1,3 @@
-package com.moi.anitime.model.repo;
-
-import com.moi.anitime.model.entity.adoptionForm.AdoptionForm;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
-
-@Repository
-public interface AdoptionFormRepo extends JpaRepository<AdoptionForm, Integer> {
-    public Optional<AdoptionForm> findAdoptionFormByMeeting_MeetNo(@Param("meetno") int meetNo);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ec8c9d381e3ffae3d36e5a6b59b9f6f61c9aa31e4012f0dc5b4d3776d7ca7fd
+size 488
