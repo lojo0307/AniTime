@@ -1,25 +1,3 @@
-package com.moi.anitime.model.entity.notice;
-
-import lombok.*;
-
-import javax.persistence.*;
-import java.time.LocalDateTime;
-
-@Entity
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@Builder
-public class Notice {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "noticeno")
-    int noticeNo;
-    @Column(name = "memberno")
-    int memberNo;
-    int noticeKind;
-    LocalDateTime noticeTime;
-    String noticeContent;
-    boolean noticeCheck;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:38f1d7c0f52c7aea4498e03e93f3d0914216c3fd432a2983f14794733ce58cf5
+size 622
