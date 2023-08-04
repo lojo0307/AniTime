@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b125c16ddc7131b93e78759b2dda9e407e1a9780d217798b448eb2721d448e9b
-size 441
+package com.moi.anitime.api.response.animal;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
+public class AnimalDetailRes {
+    private String kind;
+    private String age;
+    private String weight;
+    private String color;
+    private String gender;
+
+    private String noticeNo;
+    private String noticeDate;
+    private String location;
+    private String specialMark;
+    private String shelter;
+    private String tel;
+}
