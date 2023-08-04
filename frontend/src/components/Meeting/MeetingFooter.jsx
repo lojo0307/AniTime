@@ -1,19 +1,3 @@
-import React from "react";
-import { styled } from "styled-components";
-
-export default function MeetingFooter() {
-  return <Footer></Footer>;
-}
-
-const Footer = styled.div`
-  background-color: #2e2f39;
-  box-sizing: border-box;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 0 16px;
-  gap: 16px;
-  color: white;
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:5af37de2c3bf97c4b29f327736e62ae972c7e74ac85e8fac0990232c2ffe3b84
+size 2920
