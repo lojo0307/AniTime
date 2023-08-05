@@ -1,9 +1,3 @@
-package com.moi.anitime.model.repo;
-
-import com.moi.anitime.model.entity.notice.Notice;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface NoticeRepo extends JpaRepository<Notice,Integer> {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5e8a6113e6de57792f394b79f3db5c97785d06e651a34a439ab1f1e56ed0106
+size 560
