@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:96f23efdc268b9587721c49c90027c29698759ac6c4b530feb198386cb36775a
-size 619
+package com.moi.anitime.model.repo;
+
+import com.moi.anitime.model.entity.notice.Notice;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface NoticeRepo extends JpaRepository<Notice,Integer> {
+}
