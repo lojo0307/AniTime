@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:785364a64c1341315adfa322db582f980aa65545eacaa454bfb68981bb699087
-size 306
+const { createSlice } = require("@reduxjs/toolkit");
+
+const reservedDate = createSlice({
+  name: "reservedDate",
+  initialState: { date: "", time: "" },
+  reducers: {
+    setReservedDate(state, action) {
+      state.date = action.payload.date;
+      state.time = action.payload.time;
+    },
+  },
+});
+
+export const { setReservedDate } = reservedDate.actions;
+export default reservedDate.reducer;
