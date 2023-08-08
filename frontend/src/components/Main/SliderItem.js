@@ -1,23 +1,3 @@
-import React from "react";
-import { styled } from "styled-components";
-
-export default function SliderItem({ animal }) {
-  const { desertionNo, noticeNo, kind, sexcd, status } = animal;
-  return (
-    <Div>
-      <p>{desertionNo}</p>
-      <p>{noticeNo}</p>
-      <p>{kind}</p>
-      <p>{sexcd}</p>
-      <p>{status}</p>
-    </Div>
-  );
-}
-
-const Div = styled.div`
-  box-sizing: border-box;
-  border: black 3px solid;
-  width: 300px;
-  height: 400px;
-  flex-shrink: 0;
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:de3d1e98aebdb97a90daa89c66494a250e36236c952a9e250b951d8225f88464
+size 850
