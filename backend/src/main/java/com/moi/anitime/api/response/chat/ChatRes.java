@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2598c443349bde7d36f80a3e5ed4c31a7cbdc363881ebc2838069f619c6b8f2c
-size 252
+package com.moi.anitime.api.response.chat;
+
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+public class ChatRes {
+    private int chatNo;
+    private int sendNo;
+    private String content;
+    private LocalDateTime writtenTime;
+}
