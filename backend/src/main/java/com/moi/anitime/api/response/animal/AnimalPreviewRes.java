@@ -1,23 +1,3 @@
-package com.moi.anitime.api.response.animal;
-
-import lombok.*;
-import lombok.extern.slf4j.Slf4j;
-
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-public class AnimalPreviewRes {
-    private long desertionNo;
-
-    private String category; // 축종 개고양
-    private String detailKind;// 골든 리튼리버
-
-    private char sexcd;
-    private String processState;
-    private String thumbnail;
-    private boolean isBookmarked;
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:974822ea37b560da4850aead5ecb175d9aaef213521aa2551c40a9b6fd05ee74
+size 453
