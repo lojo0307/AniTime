@@ -1,22 +1,3 @@
-const { createSlice } = require("@reduxjs/toolkit");
-
-const initialState = {
-  desertionNo: 0,
-  profileNo: 0,
-};
-
-const detailInfoSlice = createSlice({
-  name: "detailInfo",
-  initialState,
-  reducers: {
-    setDesertionNo(state, action) {
-      state.desertionNo = action.payload;
-    },
-    setProfileNo(state, action) {
-      state.profileNo = action.payload;
-    },
-  },
-});
-
-export let { setDesertionNo, setProfileNo } = detailInfoSlice.actions;
-export default detailInfoSlice.reducer;
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a3c62a124f1315fc73bbd9549fc63d6b92de00111695f55622c98eb819d6ec9
+size 589
