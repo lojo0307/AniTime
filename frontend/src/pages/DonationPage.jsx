@@ -1,10 +1,3 @@
-import React from 'react'
-import Payment from 'components/Donation/Payment'
-export default function DonationPage() {
-  return (
-
-    <Payment>
-
-    </Payment>
-  )
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c43cbbcf9626ce0d204f5ed1e3b895cfd09eab000c85b3c6cf47127b518e55cb
+size 7388
