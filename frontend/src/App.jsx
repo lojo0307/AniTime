@@ -1,18 +1,3 @@
-import Footer from "components/Footer/Footer";
-import Header from "components/Header/Header";
-import React from "react";
-import { useSelector } from "react-redux";
-import { Navigate, Outlet, useLocation } from "react-router-dom";
-
-export default function App() {
-  const token = useSelector((state) => state.member.token);
-  const pathname = useLocation().pathname;
-
-  return (
-    <>
-      <Header />
-      {pathname === "/" || token ? <Outlet /> : <Navigate to="/login" />}
-      <Footer />
-    </>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e84df5600c914a07eee3ba894eeb4d3b771a7e53e6e0444bf3fce7a6238f5380
+size 508
