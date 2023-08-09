@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b31aace8d5959d3b299f205be1f08cdeae3b44099b80b256c3e4d2cb61ed477
-size 349
+package com.moi.anitime.api.response.donation;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
+public class DonationBoardRes {
+    private String title;
+    private int dDay;
+    private String thumbnail;
+    private int attain;
+    private int goal;
+    private int achievement;
+    private String detail;
+    private  String poster;
+}
