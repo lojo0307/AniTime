@@ -1,18 +1,3 @@
-const { createSlice } = require("@reduxjs/toolkit");
-
-const initialState = {
-  meetingNo: -1,
-};
-
-const shelterMeetingSlice = createSlice({
-  name: "shelterMeeting",
-  initialState,
-  reducers: {
-    setMeetingNo(state, action) {
-      state.meetingNo = action.payload;
-    },
-  },
-});
-
-export const { setMeetingNo } = shelterMeetingSlice.actions;
-export default shelterMeetingSlice.reducer;
+version https://git-lfs.github.com/spec/v1
+oid sha256:435e912f2297a24c6203b391e248b4fdbe3c69260e1d42998c49e5051f2bec6b
+size 494
