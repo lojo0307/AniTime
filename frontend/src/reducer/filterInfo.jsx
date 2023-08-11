@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:19a97b221a0dff26e0686dde0c8d6e07412084d3e0040d00dd70de33ce167174
-size 1212
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+  kindType: 0,
+  genderType: 0,
+};
+
+const filterInfoSlice = createSlice({
+  name: "filterInfo",
+  initialState,
+  reducers: {
+    setKindType: (state, action) => {
+      state.kindType = action.payload;
+    },
+
+    setGenderType: (state, action) => {
+      state.genderType = action.payload;
+    },
+  },
+});
+export const { setKindType, setGenderType } = filterInfoSlice.actions;
+export default filterInfoSlice.reducer;
