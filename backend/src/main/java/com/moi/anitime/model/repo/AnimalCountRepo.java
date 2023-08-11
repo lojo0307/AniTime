@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e41e997b94a12266486e9dab8159c6c845cc2687c374cab37bcf4a6d0a0feade
-size 286
+package com.moi.anitime.model.repo;
+
+import com.moi.anitime.model.entity.animal.Animal;
+import com.moi.anitime.model.entity.animal.AnimalCount;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AnimalCountRepo extends JpaRepository<AnimalCount, Long> {
+
+}
