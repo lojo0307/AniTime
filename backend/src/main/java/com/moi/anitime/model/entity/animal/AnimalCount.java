@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a5371b2a0e149ced12b3b36b2043a982d4d5fd135c0bf956a205583413615f5
-size 469
+package com.moi.anitime.model.entity.animal;
+
+import lombok.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.time.LocalDate;
+
+@Entity(name = "visualizermap")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Builder
+public class AnimalCount {
+
+    @Id
+    @Column(name = "mapcd")
+    int mapCd;
+    @Column(name = "mapname")
+    String mapName;
+
+    @Column(name="entrynumber")
+    int entryNumber;
+}
