@@ -1,19 +1,3 @@
-import { createSlice } from "@reduxjs/toolkit";
-
-const initialState = {
-  roomNo: -1,
-  name: "",
-};
-
-const chatRoomSlice = createSlice({
-  name: "chatRoom",
-  initialState,
-  reducers: {
-    setRoom: (state, action) => {
-      state.roomNo = action.payload.roomNo;
-      state.name = action.payload.name;
-    },
-  },
-});
-export const { setRoom } = chatRoomSlice.actions;
-export default chatRoomSlice.reducer;
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b30e6d3373c9ed31d82e88f91d6263817dc88d9f7235713cb5144599595a107
+size 505
