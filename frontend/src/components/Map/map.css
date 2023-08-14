@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:72245a5477ca930921fe4a1c089e2427a5928cdaf5b85f6bbf120d2e24d4583c
-size 257
+.svg-map {
+    width: 100%;
+    height: 100%;
+    stroke: #777;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.svg-map__location {
+    cursor: pointer;
+}
+.svg-map__location:focus,
+.svg-map__location:hover {
+    outline: 0;
+}
