@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe7af19ae63508ed1686c4496e4819e0cc7c3ba5b1481c12d8a731de4d2b35b1
-size 410
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+  socket: null,
+  client: null,
+};
+
+const stompSlice = createSlice({
+  name: "stomp",
+  initialState,
+  reducers: {
+    setStomp: (state, action) => {
+      state.socket = action.payload.socket;
+      state.client = action.payload.client;
+    },
+  },
+});
+export const { setStomp } = stompSlice.actions;
+export default stompSlice.reducer;
