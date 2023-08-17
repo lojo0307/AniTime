@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d4335dd2f2e11b89238bfcd94324e99d49c3925040d48d7bc91f0818758fcf4e
-size 416
+package com.moi.anitime.api.response.chat;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ChatRoomListRes {
+    private int roomNo;
+    private String name;
+    private String lastMsg;
+    private int unreadCnt;
+    private LocalDateTime lastTime;
+}
