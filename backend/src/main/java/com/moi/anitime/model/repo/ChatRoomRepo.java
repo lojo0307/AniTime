@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:81e55e0e96781ee5a0b487d16e01d04a5cae8a2f1548f8c7767fe787a43c1655
-size 909
+package com.moi.anitime.model.repo;
+
+import com.moi.anitime.api.response.chat.ChatRoomListRes;
+import com.moi.anitime.model.entity.chat.ChatRoom;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface ChatRoomRepo extends JpaRepository<ChatRoom, Integer> {
+    @Query(name = "findChatRoomsByGeneralNo", nativeQuery = true)
+    List<ChatRoomListRes> findChatRoomsByGeneralNo(@Param("generalno") int generalNo);
+
+    @Query(name = "findChatRoomsByShelterNo", nativeQuery = true)
+    List<ChatRoomListRes> findChatRoomsByShelterNo(@Param("shelterno") int shelterNo);
+
+    Optional<ChatRoom> findChatRoomByGeneralMember_MemberNoAndShelterMember_MemberNo(@Param("generalno") int generalNo, @Param("shelterno") int shelterNo);
+}

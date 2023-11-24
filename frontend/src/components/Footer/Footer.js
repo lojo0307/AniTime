@@ -1,3 +1,54 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:178148cf5b771cf88ab6baeb2c62c56b8109e9bc609538ce183d35ce7828edae
-size 1272
+import React from "react";
+import { styled } from "styled-components";
+
+export default function Footer() {
+  return (
+    <StyleFooter>
+      <FooterDiv>
+        <span
+          style={{
+            color: "var(--darkestgrey, #535A61)",
+            fontFeatureSettings: "'clig' off, 'liga' off",
+            fontSize: "14px",
+            fontWeight: "400",
+            lineHeight: "20px",
+          }}
+        >
+          Copyright © Mo. I | All Rights Reserved{" "}
+        </span>
+        <span
+          style={{
+            color: "var(--darkestgrey, #535A61)",
+            fontFeatureSettings: "'clig' off, 'liga' off",
+            fontSize: "12px",
+            fontWeight: "400",
+            lineHeight: "20px",
+          }}
+        >
+          권지훈 | 김민태 | 김정현 | 임성원 | 장명주 | 허재웅
+        </span>
+      </FooterDiv>
+    </StyleFooter>
+  );
+}
+
+const StyleFooter = styled.footer`
+  background-color: #f7f8fa;
+  height: 96px;
+`;
+
+const FooterDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 16px;
+  height: 80px;
+  min-width: 800px;
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+`;

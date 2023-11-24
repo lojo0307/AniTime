@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:199cc058dd3a0fcb1cffec0f909ba82bfa39fbd8e79e76de7fb3991b79d20dbb
-size 998
+package com.moi.anitime.model.entity.member;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
+
+import javax.persistence.*;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
+@ToString
+@DiscriminatorColumn(name="DTYPE")
+@Inheritance(strategy = InheritanceType.JOINED)
+//@DiscriminatorColumn // 하위 테이블의 구분 컬럼 생성(default = DTYPE)
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "updateSnsTokenByMemberNo",
+                query = "UPDATE GeneralMember SET snsToken = :snsToken WHERE generalNo = :generalNo"
+        )
+})
+public class Member {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "memberno")
+    private int memberNo;
+    private String email;
+    private String password;
+    @Column(name = "memberkind")
+    private int memberKind;
+    private String phone;
+    private String name;
+}

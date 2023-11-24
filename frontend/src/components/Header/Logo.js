@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2343ebeb0afc1b27545e1d3fb3082a6e2ebb89503697653447622d63308153f1
-size 600
+import React from "react";
+import { Link } from "react-router-dom";
+import { styled } from "styled-components";
+
+export default function Logo({ white }) {
+  return (
+    <Div to="/">
+      <img src="/icons/logo.svg" alt="애니타임" />
+      <Title $white={white}>애니타임</Title>
+    </Div>
+  );
+}
+
+const Div = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  text-decoration: none;
+  color: #35383b;
+`;
+
+const Title = styled.p`
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  ${({ $white }) => $white && "color: #FFFFFF"};
+`;

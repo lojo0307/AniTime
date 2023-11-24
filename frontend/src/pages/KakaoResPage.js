@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:500237917c7ab0cfba17a7d4d44d15c16323c9aec4aaa46d569ebc1cd3371cfd
-size 830
+import { useSelector, useDispatch } from "react-redux";
+import { setMember } from "../reducer/member";
+import http from "../api/commonHttp";
+
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+export default function KakaoResPage() {
+  const navi = useNavigate();
+  const dispatch = useDispatch();
+
+  const params = new URL(document.location.toString()).searchParams;
+  const code = params.get("code");
+  useEffect(() => {
+    http
+      .get("auth/oauth2/kakao", {
+        params: {
+          code: code,
+        },
+      })
+      .then((res) => {
+        // console.log(res);
+        dispatch(setMember(res));
+        navi("/");
+      })
+      .catch((err) => {
+        // console.log(err);
+        navi("/login");
+      });
+    // console.log(code);
+  }, []);
+  return <div></div>;
+}

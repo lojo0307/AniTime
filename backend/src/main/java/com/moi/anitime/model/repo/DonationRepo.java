@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f7cf29b72242c97b587649755557ac74680698defbbd686c0b4574db58206d32
-size 724
+package com.moi.anitime.model.repo;
+
+import com.moi.anitime.model.entity.donation.Donation;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface DonationRepo extends JpaRepository<Donation, Integer> {
+    Optional<Donation> findDonationByDonationNo(@Param("donationno") int donationNo);
+    Page<Donation> findDonationsByBoardNo(@Param("boardno") int boardNo, Pageable pageable);
+    void deleteDonationByDonationNo(@Param("donationno") int donationNo);
+
+}

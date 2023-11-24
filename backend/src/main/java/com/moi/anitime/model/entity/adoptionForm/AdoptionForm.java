@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6ebf9a6e06191c6b92ef098544f442227853a217a18b8c613697f5648756a9a8
-size 600
+package com.moi.anitime.model.entity.adoptionForm;
+
+import com.moi.anitime.model.entity.animal.Animal;
+import com.moi.anitime.model.entity.meeting.Meeting;
+import com.moi.anitime.model.entity.member.Member;
+import lombok.*;
+
+import javax.persistence.*;
+
+
+@Entity(name = "adoptionform")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Builder
+public class AdoptionForm {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "formno")
+    private int formNo;
+    @OneToOne
+    @JoinColumn(name = "meetno")
+    private Meeting meeting;
+    private String image;
+
+}

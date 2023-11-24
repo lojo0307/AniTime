@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc363be9b6010a626546630c4938ef697e4b4a32890a8438ff12610f85dd798e
-size 703
+package com.moi.anitime.api.controller;
+
+import com.moi.anitime.exception.auth.CAuthenticationEntryPointException;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
+
+@ApiIgnore
+@RequiredArgsConstructor
+@RestController
+@RequestMapping(value = "/exception")
+public class ExceptionController {
+    @GetMapping(value = "/entrypoint")
+    public void entryPointException() throws CAuthenticationEntryPointException{
+        throw new CAuthenticationEntryPointException();
+    }
+}

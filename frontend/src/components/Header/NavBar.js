@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4413a72b75830969f7813d256a95d223a8f17ab472aefb9ad282e5b82a6738e6
-size 822
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { styled } from "styled-components";
+
+export default function NavBar() {
+  // const activeStyle = {
+  //   color: "#3994f0",
+  // };
+  return (
+    <Nav>
+      <LinkP to="desertion">입양하기</LinkP>
+      <LinkP to="missing">실종동물</LinkP>
+      <LinkP to="donation">후원하기</LinkP>
+    </Nav>
+  );
+}
+
+const LinkP = styled(NavLink)`
+  color: #35383b;
+  text-decoration: none;
+  &.active {
+    color: #3994f0;
+    font-weight: 800;
+    transition: 0.1s;
+  }
+  &:hover {
+    color: #3994f0;
+    font-weight: 800;
+    transition: 0.2s;
+  }
+`;
+
+const Nav = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  width: auto;
+  max-width: 560px;
+  &.active {
+    color: #3994f0;
+  }
+`;
