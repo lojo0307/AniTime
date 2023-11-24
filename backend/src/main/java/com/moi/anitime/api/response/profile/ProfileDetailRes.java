@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dcd523fce8cef191d2e39d7a0bcf6c2de46921b0c12e5b55328f25bb37b4ed99
-size 596
+package com.moi.anitime.api.response.profile;
+
+import com.moi.anitime.model.entity.member.GeneralMember;
+import com.moi.anitime.model.entity.profile.ProfileKind;
+import com.moi.anitime.model.entity.profile.SexCode;
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class ProfileDetailRes {
+    private String name;
+    private String kind;
+    private String gender;
+    private String birth;
+    private String weight;
+    private String specialMark;
+    private String date;
+    private String location;
+    private float lat;
+    private float lon;
+    private String image;
+}

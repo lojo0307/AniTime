@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7f2b19be285850602f7322a6355da5f79dccd9b77f4ef9bae3dcc432b1bad50
-size 881
+import AnimalItem from "components/Desertion/AnimalItem";
+import React, { useCallback } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+import { setDesertionNo } from "reducer/detailInfo";
+import { styled } from "styled-components";
+
+export default function SliderItem({ animal }) {
+  // const { desertionNo, noticeNo, kind, sexcd, status } = animal;
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleClick = useCallback(() => {
+    dispatch(setDesertionNo(animal.desertionNo));
+    navigate("/desertion");
+  }, [animal, dispatch, navigate]);
+
+  return (
+    <Div>
+      <AnimalItem animal={animal} handleClick={handleClick} />
+    </Div>
+  );
+}
+
+const Div = styled.div`
+  box-sizing: border-box;
+  /* width: 10%; */
+  width: 40vmin;
+  height: fit-content;
+  flex-shrink: 0;
+  padding: 8px;
+`;

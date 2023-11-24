@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0f46fba4af68ced3ed4e518e3715b0cd65288962f0d9d954bc204336a031d483
-size 781
+package com.moi.anitime.api.request.donation;
+
+import com.moi.anitime.model.entity.donation.Donation;
+import io.swagger.annotations.ApiModel;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
+
+@Getter
+@Setter
+@ApiModel("donationRegistReq")
+public class DonationRegistReq {
+    @NotNull
+    private int boardNo;
+    @NotNull
+    private int generalNo;
+    @NotNull
+    private int donateAmount;
+
+    public Donation toEntity() {
+        return Donation.builder()
+                .boardNo(this.boardNo)
+                .generalNo(this.generalNo)
+                .donateAmount(this.donateAmount)
+                .donateDate(LocalDateTime.now())
+                .build();
+    }
+}

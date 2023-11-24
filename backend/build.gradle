@@ -1,3 +1,72 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:057f32d6f1e96864eee9ba774f51d28ee159b1a41041b6004d60d38e18becf87
-size 2800
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.13'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.moi'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '11'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+	implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+	// https://mvnrepository.com/artifact/com.google.guava/guava
+	implementation group: 'com.google.guava', name: 'guava', version: '32.0.1-jre'
+	// https://mvnrepository.com/artifact/com.querydsl/querydsl-jpa
+	implementation group: 'com.querydsl', name: 'querydsl-jpa', version: '5.0.0'
+
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.33'
+
+	// rabbitmq
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-reactor-netty', version: '2.4.6'
+
+	implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.12.4'
+
+	implementation 'org.springframework.boot:spring-boot-starter-amqp'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	testImplementation 'org.springframework.amqp:spring-rabbit-test'
+
+	dependencies { implementation 'com.google.code.gson:gson:2.8.7' }
+
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	runtimeOnly group: 'io.jsonwebtoken', name : 'jjwt-jackson', version : '0.11.5'
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.5'
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation'
+	compileOnly 'org.projectlombok:lombok'
+	implementation 'org.hibernate.validator:hibernate-validator:7.0.1.Final'
+	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+//	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+
+	implementation group: 'io.openvidu', name: 'openvidu-java-client', version: '2.25.0'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

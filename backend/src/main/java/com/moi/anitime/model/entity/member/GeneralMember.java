@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:256d4af481dba86eff1c560fa644401a8edbb33d040294a1a8cb0ef9bb058338
-size 565
+package com.moi.anitime.model.entity.member;
+
+import lombok.*;
+import lombok.experimental.SuperBuilder;
+
+import javax.persistence.*;
+
+@SuperBuilder
+@Entity(name = "generalmember")
+@NoArgsConstructor
+@PrimaryKeyJoinColumn(name = "generalno")
+@DiscriminatorValue("G")
+@Setter
+@Getter
+public class GeneralMember extends Member{
+
+    @Column(name="snscheck", columnDefinition = "TINYINT(1)")
+    private boolean snsCheck;
+    @Column(name="snstoken")
+    private String snsToken;
+
+    public GeneralMember(int generalno) {
+        this.setMemberNo(generalno);
+    }
+
+}

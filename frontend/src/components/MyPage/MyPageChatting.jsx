@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:04108605b1fe6b05ae346283e9d821fae7d2195437a6b3312ef7aab229790315
-size 745
+import React, { useState } from "react";
+import { styled } from "styled-components";
+import ChatUi from "components/MyPage/GeneralChatting/ChatUi";
+import ChattingList from "components/MyPage/GeneralChatting/ChattingList";
+
+export default function MyPageChatting() {
+  const [message, setMessage] = useState(false);
+  console.log(message);
+  return (
+    <MainDiv style={{ height: `calc(100vh - 231px)`, paddingBottom: 0 }}>
+      <Div>
+        <ChattingList update={message} />
+      </Div>
+      <Div>
+        <ChatUi height="100%" update={setMessage} type={1}/>
+      </Div>
+    </MainDiv>
+  );
+}
+
+const MainDiv = styled.div`
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+`;
+const Div = styled.div`
+  width: 50%;
+  height: 100%;
+`;

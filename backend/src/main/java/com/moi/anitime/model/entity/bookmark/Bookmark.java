@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:52beb7002db1b84c4b8b751a85c3a53847847b32104af266cf696799c503b6fe
-size 728
+package com.moi.anitime.model.entity.bookmark;
+
+import com.moi.anitime.model.entity.animal.Animal;
+import com.moi.anitime.model.entity.member.GeneralMember;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Bookmark {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "bookmarkno")
+    private int bookmarkNo;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "generalno")
+    private GeneralMember generalMember;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "desertionno")
+    private Animal animal;
+}

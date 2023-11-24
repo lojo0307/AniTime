@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:338ab4b22645ccabf3d5a7940396019a56b704b2385fa616c62989626f0cbcad
-size 741
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+  descClicked: false,
+  ascClicked: false,
+  sortSelected: "정렬",
+  sortType: 0,
+};
+
+const sortInfoSlice = createSlice({
+  name: "sortInfo",
+  initialState,
+  reducers: {
+    setSortType: (state, action) => {
+      state.sortType = action.payload;
+    },
+    setSortSelected: (state,action)=>{
+        state.sortSelected = action.payload;
+    },
+    setDescClicked: (state,action)=>{
+        state.descClicked = action.payload;
+    },
+    setAscClicked: (state,action)=>{
+        state.ascClicked= action.payload;
+    }
+  },
+});
+export const {setSortType,setSortSelected,setDescClicked,setAscClicked} =
+  sortInfoSlice.actions;
+export default sortInfoSlice.reducer;

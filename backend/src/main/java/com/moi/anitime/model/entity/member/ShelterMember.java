@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:79126700c0a668725b104c3c78f544d35f463313609c65a9cabfea9b84db1e97
-size 590
+package com.moi.anitime.model.entity.member;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.Lob;
+import javax.persistence.PrimaryKeyJoinColumn;
+import java.sql.Blob;
+
+@SuperBuilder
+@Entity(name = "sheltermember")
+@NoArgsConstructor
+@DiscriminatorValue("S")
+@PrimaryKeyJoinColumn(name = "shelterno")
+@Setter
+@Getter
+public class ShelterMember extends Member{
+    private String addr;
+    private String evidence;
+}

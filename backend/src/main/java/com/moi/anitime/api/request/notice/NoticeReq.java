@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:48056c334cb3833732c32d4dc87759d5f3b1b733f5b160ab1317ff548a1dacdc
-size 1211
+package com.moi.anitime.api.request.notice;
+
+import com.moi.anitime.model.entity.notice.Notice;
+import io.swagger.annotations.ApiModel;
+import lombok.Data;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+@Data
+@ApiModel("noticeReq")
+public class NoticeReq {
+    int generalNo;
+    int shelterNo;
+    int noticeKind;
+    int status;
+    String reservedDate;
+    int amount;
+
+    public Notice toEntity(int memberNo, String noticeContent) {
+        Notice notice=Notice.builder()
+                .memberNo(memberNo)
+                .noticeKind(this.noticeKind)
+                .noticeTime(LocalDateTime.now())
+                .noticeContent(noticeContent)
+                .noticeCheck(false)
+                .build();
+        return notice;
+    }
+
+    public Notice toEntity(int memberNo, String noticeContent, boolean pending) {
+        Notice notice=Notice.builder()
+                .memberNo(memberNo)
+                .noticeKind(this.noticeKind)
+                .noticeTime(LocalDateTime.parse(this.reservedDate).minusHours(1))
+                .noticeContent(noticeContent)
+                .noticeCheck(false)
+                .build();
+        return notice;
+    }
+}

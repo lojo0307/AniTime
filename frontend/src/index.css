@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5f984cd29251a3fd38abc4824c240d2f7507cb0260a90938d8a2d3738e60fb0b
-size 870
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+*{
+  font-family: 'nanumsquare';
+}
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* { 
+ font-family: 'Noto Sans KR', sans-serif;
+} */
+/* @font-face {
+  font-family: 'MYArirang_gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYArirang_gothic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  font-family: 'MYArirang_gothic';
+} */
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

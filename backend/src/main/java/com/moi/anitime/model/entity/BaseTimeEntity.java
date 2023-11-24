@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a3a0dad05a624a7ba13071a85801a4997a6761104335e6b72a24eba5a87d5456
-size 607
+package com.moi.anitime.model.entity;
+
+import lombok.Getter;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.Column;
+import javax.persistence.EntityListeners;
+import javax.persistence.MappedSuperclass;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Getter
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
+public abstract class BaseTimeEntity {
+    @Column(name = "writtentime", columnDefinition = "DATETIME")
+    @CreatedDate
+    private LocalDateTime writtenTime;
+}
